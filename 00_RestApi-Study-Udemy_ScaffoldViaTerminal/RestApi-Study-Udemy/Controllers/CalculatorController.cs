@@ -26,9 +26,10 @@ public class CalculatorController : ControllerBase
         return BadRequest("Invalid Input");
     }
 
-    private int ConvertToDecimal(string strNumber)
+    private decimal ConvertToDecimal(string strNumber)
     {
-        throw new NotImplementedException();
+        decimal decimalNumber = decimal.Parse(strNumber);
+        return decimalNumber;
     }
 
     private bool IsNumeric(string strNumber)
